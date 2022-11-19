@@ -1,0 +1,13 @@
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\bin\Debug\yt_mwldr.exe.config
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\bin\Debug\yt_mwldr.exe
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\bin\Debug\yt_mwldr.pdb
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.csproj.AssemblyReference.cache
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.Form1.resources
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.Properties.Resources.resources
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.csproj.GenerateResource.cache
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.csproj.CoreCompileInputs.cache
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.csproj.CopyComplete
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.exe
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.pdb
+C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.Custom.CustomTextBox.resources
