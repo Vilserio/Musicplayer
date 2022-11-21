@@ -34,29 +34,34 @@ namespace yt_mwldr
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.urlTextBox = new yt_mwldr.Custom.CustomTextBox();
-            this.urlLabel = new System.Windows.Forms.Label();
-            this.qualityLabel = new System.Windows.Forms.Label();
             this.fileLabel = new System.Windows.Forms.Label();
+            this.qualityLabel = new System.Windows.Forms.Label();
+            this.urlLabel = new System.Windows.Forms.Label();
+            this.urlTextBox = new yt_mwldr.Custom.CustomTextBox();
+            this.controlPanel = new System.Windows.Forms.Panel();
+            this.exitButton = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.controlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTop.Controls.Add(this.controlPanel);
             this.panelTop.Controls.Add(this.pictureBox1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(784, 100);
+            this.panelTop.Size = new System.Drawing.Size(784, 130);
             this.panelTop.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(253, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(279, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(239, 79);
             this.pictureBox1.TabIndex = 1;
@@ -66,7 +71,7 @@ namespace yt_mwldr
             // 
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(0, 100);
+            this.panelShadow.Location = new System.Drawing.Point(0, 130);
             this.panelShadow.Name = "panelShadow";
             this.panelShadow.Size = new System.Drawing.Size(784, 9);
             this.panelShadow.TabIndex = 1;
@@ -79,10 +84,44 @@ namespace yt_mwldr
             this.panel1.Controls.Add(this.urlLabel);
             this.panel1.Controls.Add(this.urlTextBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 109);
+            this.panel1.Location = new System.Drawing.Point(0, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 452);
+            this.panel1.Size = new System.Drawing.Size(784, 422);
             this.panel1.TabIndex = 2;
+            // 
+            // fileLabel
+            // 
+            this.fileLabel.AutoSize = true;
+            this.fileLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileLabel.ForeColor = System.Drawing.Color.Lavender;
+            this.fileLabel.Location = new System.Drawing.Point(500, 185);
+            this.fileLabel.Name = "fileLabel";
+            this.fileLabel.Size = new System.Drawing.Size(109, 18);
+            this.fileLabel.TabIndex = 3;
+            this.fileLabel.Text = "File destination";
+            this.fileLabel.Click += new System.EventHandler(this.fileLabel_Click);
+            // 
+            // qualityLabel
+            // 
+            this.qualityLabel.AutoSize = true;
+            this.qualityLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qualityLabel.ForeColor = System.Drawing.Color.Lavender;
+            this.qualityLabel.Location = new System.Drawing.Point(156, 185);
+            this.qualityLabel.Name = "qualityLabel";
+            this.qualityLabel.Size = new System.Drawing.Size(56, 18);
+            this.qualityLabel.TabIndex = 2;
+            this.qualityLabel.Text = "Quality";
+            // 
+            // urlLabel
+            // 
+            this.urlLabel.AutoSize = true;
+            this.urlLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urlLabel.ForeColor = System.Drawing.Color.Lavender;
+            this.urlLabel.Location = new System.Drawing.Point(156, 64);
+            this.urlLabel.Name = "urlLabel";
+            this.urlLabel.Size = new System.Drawing.Size(38, 18);
+            this.urlLabel.TabIndex = 1;
+            this.urlLabel.Text = "URL:";
             // 
             // urlTextBox
             // 
@@ -102,39 +141,56 @@ namespace yt_mwldr
             this.urlTextBox.Texts = "";
             this.urlTextBox.UnderlinedStyle = true;
             // 
-            // urlLabel
+            // controlPanel
             // 
-            this.urlLabel.AutoSize = true;
-            this.urlLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.urlLabel.Location = new System.Drawing.Point(156, 64);
-            this.urlLabel.Name = "urlLabel";
-            this.urlLabel.Size = new System.Drawing.Size(38, 18);
-            this.urlLabel.TabIndex = 1;
-            this.urlLabel.Text = "URL:";
+            this.controlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.controlPanel.Controls.Add(this.iconButton1);
+            this.controlPanel.Controls.Add(this.exitButton);
+            this.controlPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.controlPanel.Location = new System.Drawing.Point(0, 0);
+            this.controlPanel.Name = "controlPanel";
+            this.controlPanel.Size = new System.Drawing.Size(784, 35);
+            this.controlPanel.TabIndex = 3;
             // 
-            // qualityLabel
+            // exitButton
             // 
-            this.qualityLabel.AutoSize = true;
-            this.qualityLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qualityLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.qualityLabel.Location = new System.Drawing.Point(156, 185);
-            this.qualityLabel.Name = "qualityLabel";
-            this.qualityLabel.Size = new System.Drawing.Size(56, 18);
-            this.qualityLabel.TabIndex = 2;
-            this.qualityLabel.Text = "Quality";
+            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.ForeColor = System.Drawing.Color.Transparent;
+            this.exitButton.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.exitButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(255)))));
+            this.exitButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.exitButton.IconSize = 30;
+            this.exitButton.Location = new System.Drawing.Point(751, 3);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(30, 30);
+            this.exitButton.TabIndex = 5;
+            this.exitButton.UseCompatibleTextRendering = true;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // fileLabel
+            // iconButton1
             // 
-            this.fileLabel.AutoSize = true;
-            this.fileLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.fileLabel.Location = new System.Drawing.Point(500, 185);
-            this.fileLabel.Name = "fileLabel";
-            this.fileLabel.Size = new System.Drawing.Size(109, 18);
-            this.fileLabel.TabIndex = 3;
-            this.fileLabel.Text = "File destination";
-            this.fileLabel.Click += new System.EventHandler(this.fileLabel_Click);
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(255)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(715, 3);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(30, 30);
+            this.iconButton1.TabIndex = 6;
+            this.iconButton1.UseCompatibleTextRendering = true;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // Form1
             // 
@@ -150,6 +206,7 @@ namespace yt_mwldr
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.controlPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -164,6 +221,9 @@ namespace yt_mwldr
         private System.Windows.Forms.Label fileLabel;
         private System.Windows.Forms.Label qualityLabel;
         private System.Windows.Forms.Label urlLabel;
+        private System.Windows.Forms.Panel controlPanel;
+        private FontAwesome.Sharp.IconButton exitButton;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
 

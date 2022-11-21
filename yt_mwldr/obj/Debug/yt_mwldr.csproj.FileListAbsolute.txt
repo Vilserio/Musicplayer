@@ -11,3 +11,16 @@ C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.csproj.CopyComp
 C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.exe
 C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.pdb
 C:\Users\susan\source\repos\yt_mwldr\yt_mwldr\obj\Debug\yt_mwldr.Custom.CustomTextBox.resources
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\bin\Debug\yt_mwldr.exe.config
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\bin\Debug\yt_mwldr.exe
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\bin\Debug\yt_mwldr.pdb
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.AssemblyReference.cache
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.Custom.CustomTextBox.resources
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.Form1.resources
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.Properties.Resources.resources
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.GenerateResource.cache
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.CoreCompileInputs.cache
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.CopyComplete
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.exe
+C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.pdb
