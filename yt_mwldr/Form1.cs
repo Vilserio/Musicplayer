@@ -12,6 +12,8 @@ namespace yt_mwldr
 {
     public partial class Form1 : Form
     {
+        bool mousedown;
+
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +37,31 @@ namespace yt_mwldr
         private void iconButton1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void controlPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousedown = true;
+        }
+
+        private void controlPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mousedown)
+            {
+                int mousex = MousePosition.X - 392;
+                int mousey = MousePosition.Y - 17;
+                this.SetDesktopLocation(mousex, mousey);
+            }
+        }
+
+        private void controlPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            mousedown = false;
         }
     }
 }
