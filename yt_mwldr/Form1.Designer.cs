@@ -148,7 +148,7 @@ namespace yt_mwldr
             this.fileLabel.AutoSize = true;
             this.fileLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.fileLabel.Location = new System.Drawing.Point(500, 185);
+            this.fileLabel.Location = new System.Drawing.Point(510, 185);
             this.fileLabel.Name = "fileLabel";
             this.fileLabel.Size = new System.Drawing.Size(109, 18);
             this.fileLabel.TabIndex = 3;
@@ -160,7 +160,7 @@ namespace yt_mwldr
             this.qualityLabel.AutoSize = true;
             this.qualityLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qualityLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.qualityLabel.Location = new System.Drawing.Point(156, 185);
+            this.qualityLabel.Location = new System.Drawing.Point(165, 185);
             this.qualityLabel.Name = "qualityLabel";
             this.qualityLabel.Size = new System.Drawing.Size(56, 18);
             this.qualityLabel.TabIndex = 2;
@@ -171,7 +171,7 @@ namespace yt_mwldr
             this.urlLabel.AutoSize = true;
             this.urlLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urlLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.urlLabel.Location = new System.Drawing.Point(156, 64);
+            this.urlLabel.Location = new System.Drawing.Point(165, 64);
             this.urlLabel.Name = "urlLabel";
             this.urlLabel.Size = new System.Drawing.Size(38, 18);
             this.urlLabel.TabIndex = 1;
@@ -184,7 +184,7 @@ namespace yt_mwldr
             this.urlTextBox.BorderSize = 2;
             this.urlTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urlTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.urlTextBox.Location = new System.Drawing.Point(159, 86);
+            this.urlTextBox.Location = new System.Drawing.Point(165, 90);
             this.urlTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.urlTextBox.Multiline = false;
             this.urlTextBox.Name = "urlTextBox";

@@ -24,11 +24,6 @@ namespace yt_mwldr
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -55,6 +50,8 @@ namespace yt_mwldr
             {
                 int mousex = MousePosition.X - 392;
                 int mousey = MousePosition.Y - 17;
+                //int mousex = MousePosition.X - 0;
+                //int mousey = MousePosition.Y - 0;
                 this.SetDesktopLocation(mousex, mousey);
             }
         }
