@@ -24,3 +24,17 @@ C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwld
 C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.CopyComplete
 C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.exe
 C:\Users\OHKE2020\Documents\GitHub\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.pdb
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\bin\Debug\yt_mwldr.exe.config
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\bin\Debug\yt_mwldr.exe
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\bin\Debug\yt_mwldr.pdb
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.AssemblyReference.cache
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.SuggestedBindingRedirects.cache
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.Custom.CustomTextBox.resources
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.Form1.resources
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.Properties.Resources.resources
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.GenerateResource.cache
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.CoreCompileInputs.cache
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.csproj.CopyComplete
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.exe
+C:\Users\susanne_jarvenpaa\Downloads\YouTube-Meowloader\yt_mwldr\obj\Debug\yt_mwldr.pdb

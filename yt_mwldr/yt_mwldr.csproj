@@ -53,6 +53,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom\customButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Custom\CustomTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
