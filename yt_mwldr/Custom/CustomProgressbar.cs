@@ -27,7 +27,7 @@ namespace yt_mwldr.Custom
         private int sliderHeight = 6;
         private Textposition showValue = Textposition.Right;
 
-        private bool paintedBlack = false;
+        private bool paintedBack = false;
         private bool stopPainting = false;
 
         public CustomProgressbar()
@@ -143,5 +143,35 @@ namespace yt_mwldr.Custom
 
         public override Color ForeColor 
         { get => base.ForeColor; set => base.ForeColor = value; }
+
+        protected override void OnPaintBackground(PaintEventArgs pevent)
+        {
+            if (stopPainting == false)
+            {
+                if (paintedBack == false)
+                {
+                    Graphics graph = pevent.Graphics;
+                    Rectangle rectChannel = new Rectangle(0, 0, this.Width, ChannelHeight);
+                    using (var brushChannel = new SolidBrush(channelColor))
+                    {
+                        if (channelHeight >= sliderHeight)
+                            rectChannel.Y = this.Height - channelHeight;
+                        else rectChannel.Y = this.Height - ((channelHeight + sliderHeight) / 2);
+
+                        graph.Clear(this.Parent.BackColor);
+                        graph.FillRectangle(brushChannel, rectChannel);
+
+                        if (this.DesignMode == false)
+                            paintedBack = true;
+
+                    }
+                }
+                if(this.Value == this.Maximum)  this.Value == this.Minimum)
+                        paintedBack = false;
+            }
+
+        }
     }
+
+
 }

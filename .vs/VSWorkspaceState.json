@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\yt_mwldr",
-    "\\yt_mwldr\\bin"
+    "\\yt_mwldr\\bin",
+    "\\yt_mwldr\\Custom"
   ],
-  "SelectedNode": "\\yt_mwldr\\Form1.cs",
+  "SelectedNode": "\\yt_mwldr\\Custom\\CustomProgressbar.cs",
   "PreviewInSolutionExplorer": false
 }
