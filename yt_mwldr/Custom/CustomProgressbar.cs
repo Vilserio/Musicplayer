@@ -11,11 +11,12 @@ using System.ComponentModel;
 
 namespace yt_mwldr.Custom
 {
-    public enum Textposition
+    public enum TextPosition
     {
         Left,
         Right,
         Center,
+        Sliding,
         None
     }
     class CustomProgressbar : ProgressBar
@@ -25,7 +26,7 @@ namespace yt_mwldr.Custom
         private Color foreBackColor = Color.RoyalBlue;
         private int channelHeight = 6;
         private int sliderHeight = 6;
-        private Textposition showValue = Textposition.Right;
+        private TextPosition showValue = TextPosition.Right;
 
         private bool paintedBack = false;
         private bool stopPainting = false;
@@ -109,7 +110,7 @@ namespace yt_mwldr.Custom
             }
 
         }
-        public Textposition ShowValue
+        public TextPosition ShowValue
         {
             get
             {
@@ -166,10 +167,78 @@ namespace yt_mwldr.Custom
 
                     }
                 }
-                if(this.Value == this.Maximum)  this.Value == this.Minimum)
-                        paintedBack = false;
+                if(this.Value == this.Maximum) //tästä puuttuu kaks suoraa vitun viivaa kun ei onnistu kirjoittaa saatana.
+                                               //Video 6:55.
+                   this.Value == this.Minimum)
+                   paintedBack = false;
             }
 
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            if (stopPainting == false)
+            {
+                Graphics graph = e.Graphics;
+                double scaleFactor = (((double)this.Value - this.Minimum) / ((double)this.Maximum - this.Minimum));
+                int sliderWidth = (int)(this.Width * scaleFactor);
+                Rectangle rectSlider = new Rectangle(0, 0, sliderWidth, sliderHeight);
+                using (var brushSlider = new SolidBrush(sliderColor))
+                {
+                    if (sliderHeight >= channelHeight)
+                        rectSlider.Y = this.Height - sliderHeight;
+                    else rectSlider.Y = this.Height - ((sliderHeight + channelHeight) / 2);
+
+                    if (sliderWidth > 1)
+                        graph.FillRectangle(brushSlider, rectSlider);
+                    if (showValue != TextPosition.None)
+                        DrawValueText(graph, sliderWidth, rectSlider);
+                }
+            }
+        }
+
+        private void DrawValueText(Graphics graph, int sliderWidth, Rectangle rectSlider)
+        {
+            string text = this.Value.ToString() + "%";
+            var textSize = TextRenderer.MeasureText(text, this.Font);
+            var rectText = new Rectangle(0, 0, textSize.Width, textSize.Height + 2);
+            using (var brushText = new SolidBrush(this.ForeColor))
+            using (var brushTextBack = new SolidBrush(foreBackColor))
+            using (var textFormat = new StringFormat())
+            {
+                switch (showValue)
+                {
+
+                    case TextPosition.Left:
+                        rectText.X = 0;
+                        textFormat.Alignment = StringAlignment.Near;
+                        break;
+
+                    case TextPosition.Right:
+                        rectText.X = this.Width - textSize.Width;
+                        textFormat.Alignment = StringAlignment.Far;
+                        break;
+
+                    case TextPosition.Center:
+                        rectText.X = (this.Width - textSize.Width) / 2;
+                        textFormat.Alignment = StringAlignment.Center;
+                        break;
+
+                    case TextPosition.Sliding:
+                        rectText.X = sliderWidth - textSize.Width;
+                        textFormat.Alignment = StringAlignment.Center;
+
+                        using (var brushClear = new SolidBrush(this.Parent.BackColor))
+                        {
+                            var rect = rectSlider;
+                            rect.Y = rectText.Y;
+                            rect.Height = rect.Height;
+                            graph.FillRectangle(brushClear, rect);
+                        }
+                        break;
+                }
+
+            } //videossa kohdassa 12:57
         }
     }
 
