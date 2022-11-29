@@ -61,9 +61,16 @@ namespace yt_mwldr
             mousedown = false;
         }
 
-        private void customButton1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            if (customProgressbar1.Value < customProgressbar1.Maximum)
+                customProgressbar1.Value++;
+        }
 
+        private void customButton1_Click_1(object sender, EventArgs e)
+        {
+            customProgressbar1.Value = 0;
+            timer1.Start();
         }
     }
 }

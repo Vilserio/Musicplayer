@@ -56,7 +56,8 @@
     <Compile Include="Custom\customButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Custom\CustomProgressbar.cs">
+    <Compile Include="Custom\CustomProgressbar.cs" />
+    <Compile Include="Custom\customProgressbar2.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Custom\CustomTextBox.cs">
