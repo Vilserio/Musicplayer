@@ -167,9 +167,7 @@ namespace yt_mwldr.Custom
 
                     }
                 }
-                if(this.Value == this.Maximum) //tästä puuttuu kaks suoraa vitun viivaa kun ei onnistu kirjoittaa saatana.
-                                               //Video 6:55.
-                   this.Value == this.Minimum)
+                if ((this.Value == this.Maximum) || this.Value == this.Minimum)
                    paintedBack = false;
             }
 
@@ -238,7 +236,10 @@ namespace yt_mwldr.Custom
                         break;
                 }
 
-            } //videossa kohdassa 12:57
+                graph.FillRectangle(brushTextBack, rectText);
+                graph.DrawString(text, this.Font, brushText, rectText, textFormat);
+
+            }
         }
     }
 
