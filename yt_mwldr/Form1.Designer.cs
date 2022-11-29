@@ -38,12 +38,12 @@ namespace yt_mwldr
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customButton1 = new yt_mwldr.Custom.customButton();
+            this.customProgressbar1 = new CustomControls.RJControls.customProgressbar();
             this.fileLabel = new System.Windows.Forms.Label();
             this.qualityLabel = new System.Windows.Forms.Label();
             this.urlLabel = new System.Windows.Forms.Label();
             this.urlTextBox = new yt_mwldr.Custom.CustomTextBox();
-            this.customProgressbar1 = new CustomControls.RJControls.customProgressbar();
-            this.customButton1 = new yt_mwldr.Custom.customButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelTop.SuspendLayout();
             this.controlPanel.SuspendLayout();
@@ -149,6 +149,42 @@ namespace yt_mwldr
             this.panel1.Size = new System.Drawing.Size(784, 422);
             this.panel1.TabIndex = 2;
             // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton1.Backgroundcolor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton1.BorderRadius = 40;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(320, 255);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(150, 40);
+            this.customButton1.TabIndex = 5;
+            this.customButton1.Text = "customButton1";
+            this.customButton1.Textcolor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click_1);
+            // 
+            // customProgressbar1
+            // 
+            this.customProgressbar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
+            this.customProgressbar1.ChannelHeight = 6;
+            this.customProgressbar1.ForeBackColor = System.Drawing.Color.RoyalBlue;
+            this.customProgressbar1.ForeColor = System.Drawing.Color.White;
+            this.customProgressbar1.Location = new System.Drawing.Point(320, 338);
+            this.customProgressbar1.Name = "customProgressbar1";
+            this.customProgressbar1.ShowMaximun = false;
+            this.customProgressbar1.ShowValue = CustomControls.RJControls.TextPosition.Right;
+            this.customProgressbar1.Size = new System.Drawing.Size(100, 23);
+            this.customProgressbar1.SliderColor = System.Drawing.Color.RoyalBlue;
+            this.customProgressbar1.SliderHeight = 6;
+            this.customProgressbar1.SymbolAfter = "";
+            this.customProgressbar1.SymbolBefore = "";
+            this.customProgressbar1.TabIndex = 4;
+            // 
             // fileLabel
             // 
             this.fileLabel.AutoSize = true;
@@ -200,42 +236,6 @@ namespace yt_mwldr
             this.urlTextBox.TabIndex = 0;
             this.urlTextBox.Texts = "";
             this.urlTextBox.UnderlinedStyle = true;
-            // 
-            // customProgressbar1
-            // 
-            this.customProgressbar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
-            this.customProgressbar1.ChannelHeight = 6;
-            this.customProgressbar1.ForeBackColor = System.Drawing.Color.RoyalBlue;
-            this.customProgressbar1.ForeColor = System.Drawing.Color.White;
-            this.customProgressbar1.Location = new System.Drawing.Point(320, 338);
-            this.customProgressbar1.Name = "customProgressbar1";
-            this.customProgressbar1.ShowMaximun = false;
-            this.customProgressbar1.ShowValue = CustomControls.RJControls.TextPosition.Right;
-            this.customProgressbar1.Size = new System.Drawing.Size(100, 23);
-            this.customProgressbar1.SliderColor = System.Drawing.Color.RoyalBlue;
-            this.customProgressbar1.SliderHeight = 6;
-            this.customProgressbar1.SymbolAfter = "";
-            this.customProgressbar1.SymbolBefore = "";
-            this.customProgressbar1.TabIndex = 4;
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton1.Backgroundcolor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(320, 255);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(150, 40);
-            this.customButton1.TabIndex = 5;
-            this.customButton1.Text = "customButton1";
-            this.customButton1.Textcolor = System.Drawing.Color.White;
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click_1);
             // 
             // timer1
             // 
