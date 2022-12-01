@@ -38,6 +38,9 @@ namespace yt_mwldr
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.downloadButton = new yt_mwldr.Custom.customButton();
+            this.filepathComboBox = new yt_mwldr.Custom.customComboBox();
+            this.qualityComboBox = new yt_mwldr.Custom.customComboBox();
             this.processButton = new yt_mwldr.Custom.customButton();
             this.customProgressbar1 = new CustomControls.RJControls.customProgressbar();
             this.fileLabel = new System.Windows.Forms.Label();
@@ -45,9 +48,6 @@ namespace yt_mwldr
             this.urlLabel = new System.Windows.Forms.Label();
             this.urlTextBox = new yt_mwldr.Custom.CustomTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.qualityComboBox = new yt_mwldr.Custom.customComboBox();
-            this.filepathComboBox = new yt_mwldr.Custom.customComboBox();
-            this.downloadButton = new yt_mwldr.Custom.customButton();
             this.panelTop.SuspendLayout();
             this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -155,6 +155,62 @@ namespace yt_mwldr
             this.panel1.Size = new System.Drawing.Size(784, 440);
             this.panel1.TabIndex = 2;
             // 
+            // downloadButton
+            // 
+            this.downloadButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.downloadButton.Backgroundcolor = System.Drawing.Color.MediumSlateBlue;
+            this.downloadButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.downloadButton.BorderRadius = 40;
+            this.downloadButton.BorderSize = 0;
+            this.downloadButton.FlatAppearance.BorderSize = 0;
+            this.downloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadButton.ForeColor = System.Drawing.Color.White;
+            this.downloadButton.Location = new System.Drawing.Point(329, 281);
+            this.downloadButton.Name = "downloadButton";
+            this.downloadButton.Size = new System.Drawing.Size(150, 40);
+            this.downloadButton.TabIndex = 8;
+            this.downloadButton.Text = "Dowload";
+            this.downloadButton.Textcolor = System.Drawing.Color.White;
+            this.downloadButton.UseVisualStyleBackColor = false;
+            // 
+            // filepathComboBox
+            // 
+            this.filepathComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.filepathComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.filepathComboBox.BorderSize = 1;
+            this.filepathComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.filepathComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.filepathComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.filepathComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.filepathComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.filepathComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.filepathComboBox.Location = new System.Drawing.Point(509, 216);
+            this.filepathComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.filepathComboBox.Name = "filepathComboBox";
+            this.filepathComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.filepathComboBox.Size = new System.Drawing.Size(200, 30);
+            this.filepathComboBox.TabIndex = 7;
+            this.filepathComboBox.Texts = "";
+            // 
+            // qualityComboBox
+            // 
+            this.qualityComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.qualityComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.qualityComboBox.BorderSize = 1;
+            this.qualityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.qualityComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.qualityComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.qualityComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.qualityComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.qualityComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.qualityComboBox.Location = new System.Drawing.Point(165, 216);
+            this.qualityComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.qualityComboBox.Name = "qualityComboBox";
+            this.qualityComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.qualityComboBox.Size = new System.Drawing.Size(200, 30);
+            this.qualityComboBox.TabIndex = 6;
+            this.qualityComboBox.Texts = "";
+            // 
             // processButton
             // 
             this.processButton.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -246,62 +302,6 @@ namespace yt_mwldr
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // qualityComboBox
-            // 
-            this.qualityComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.qualityComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.qualityComboBox.BorderSize = 1;
-            this.qualityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.qualityComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.qualityComboBox.ForeColor = System.Drawing.Color.DimGray;
-            this.qualityComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.qualityComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.qualityComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.qualityComboBox.Location = new System.Drawing.Point(165, 216);
-            this.qualityComboBox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.qualityComboBox.Name = "qualityComboBox";
-            this.qualityComboBox.Padding = new System.Windows.Forms.Padding(1);
-            this.qualityComboBox.Size = new System.Drawing.Size(200, 30);
-            this.qualityComboBox.TabIndex = 6;
-            this.qualityComboBox.Texts = "";
-            // 
-            // filepathComboBox
-            // 
-            this.filepathComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.filepathComboBox.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.filepathComboBox.BorderSize = 1;
-            this.filepathComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.filepathComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.filepathComboBox.ForeColor = System.Drawing.Color.DimGray;
-            this.filepathComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.filepathComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.filepathComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.filepathComboBox.Location = new System.Drawing.Point(509, 216);
-            this.filepathComboBox.MinimumSize = new System.Drawing.Size(200, 30);
-            this.filepathComboBox.Name = "filepathComboBox";
-            this.filepathComboBox.Padding = new System.Windows.Forms.Padding(1);
-            this.filepathComboBox.Size = new System.Drawing.Size(200, 30);
-            this.filepathComboBox.TabIndex = 7;
-            this.filepathComboBox.Texts = "";
-            // 
-            // downloadButton
-            // 
-            this.downloadButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.downloadButton.Backgroundcolor = System.Drawing.Color.MediumSlateBlue;
-            this.downloadButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.downloadButton.BorderRadius = 40;
-            this.downloadButton.BorderSize = 0;
-            this.downloadButton.FlatAppearance.BorderSize = 0;
-            this.downloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.downloadButton.ForeColor = System.Drawing.Color.White;
-            this.downloadButton.Location = new System.Drawing.Point(329, 280);
-            this.downloadButton.Name = "downloadButton";
-            this.downloadButton.Size = new System.Drawing.Size(150, 40);
-            this.downloadButton.TabIndex = 8;
-            this.downloadButton.Text = "Dowload";
-            this.downloadButton.Textcolor = System.Drawing.Color.White;
-            this.downloadButton.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
