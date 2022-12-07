@@ -122,7 +122,7 @@ namespace yt_mwldr
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(305, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(325, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(152, 65);
             this.pictureBox1.TabIndex = 1;
@@ -164,8 +164,9 @@ namespace yt_mwldr
             this.downloadButton.BorderSize = 0;
             this.downloadButton.FlatAppearance.BorderSize = 0;
             this.downloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadButton.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold);
             this.downloadButton.ForeColor = System.Drawing.Color.White;
-            this.downloadButton.Location = new System.Drawing.Point(329, 281);
+            this.downloadButton.Location = new System.Drawing.Point(320, 270);
             this.downloadButton.Name = "downloadButton";
             this.downloadButton.Size = new System.Drawing.Size(150, 40);
             this.downloadButton.TabIndex = 8;
@@ -184,7 +185,7 @@ namespace yt_mwldr
             this.filepathComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.filepathComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.filepathComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.filepathComboBox.Location = new System.Drawing.Point(509, 216);
+            this.filepathComboBox.Location = new System.Drawing.Point(510, 200);
             this.filepathComboBox.MinimumSize = new System.Drawing.Size(200, 30);
             this.filepathComboBox.Name = "filepathComboBox";
             this.filepathComboBox.Padding = new System.Windows.Forms.Padding(1);
@@ -203,7 +204,7 @@ namespace yt_mwldr
             this.qualityComboBox.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.qualityComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.qualityComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.qualityComboBox.Location = new System.Drawing.Point(165, 216);
+            this.qualityComboBox.Location = new System.Drawing.Point(165, 200);
             this.qualityComboBox.MinimumSize = new System.Drawing.Size(200, 30);
             this.qualityComboBox.Name = "qualityComboBox";
             this.qualityComboBox.Padding = new System.Windows.Forms.Padding(1);
@@ -220,8 +221,9 @@ namespace yt_mwldr
             this.processButton.BorderSize = 0;
             this.processButton.FlatAppearance.BorderSize = 0;
             this.processButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.processButton.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold);
             this.processButton.ForeColor = System.Drawing.Color.White;
-            this.processButton.Location = new System.Drawing.Point(329, 93);
+            this.processButton.Location = new System.Drawing.Point(320, 110);
             this.processButton.Name = "processButton";
             this.processButton.Size = new System.Drawing.Size(150, 40);
             this.processButton.TabIndex = 5;
@@ -240,7 +242,7 @@ namespace yt_mwldr
             this.customProgressbar1.Name = "customProgressbar1";
             this.customProgressbar1.ShowMaximun = false;
             this.customProgressbar1.ShowValue = CustomControls.RJControls.TextPosition.Right;
-            this.customProgressbar1.Size = new System.Drawing.Size(100, 23);
+            this.customProgressbar1.Size = new System.Drawing.Size(450, 30);
             this.customProgressbar1.SliderColor = System.Drawing.Color.RoyalBlue;
             this.customProgressbar1.SliderHeight = 6;
             this.customProgressbar1.SymbolAfter = "";
@@ -252,7 +254,7 @@ namespace yt_mwldr
             this.fileLabel.AutoSize = true;
             this.fileLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.fileLabel.Location = new System.Drawing.Point(506, 164);
+            this.fileLabel.Location = new System.Drawing.Point(510, 165);
             this.fileLabel.Name = "fileLabel";
             this.fileLabel.Size = new System.Drawing.Size(109, 18);
             this.fileLabel.TabIndex = 3;
@@ -264,7 +266,7 @@ namespace yt_mwldr
             this.qualityLabel.AutoSize = true;
             this.qualityLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qualityLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.qualityLabel.Location = new System.Drawing.Point(162, 164);
+            this.qualityLabel.Location = new System.Drawing.Point(165, 165);
             this.qualityLabel.Name = "qualityLabel";
             this.qualityLabel.Size = new System.Drawing.Size(56, 18);
             this.qualityLabel.TabIndex = 2;
@@ -275,7 +277,7 @@ namespace yt_mwldr
             this.urlLabel.AutoSize = true;
             this.urlLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urlLabel.ForeColor = System.Drawing.Color.Lavender;
-            this.urlLabel.Location = new System.Drawing.Point(162, 23);
+            this.urlLabel.Location = new System.Drawing.Point(165, 23);
             this.urlLabel.Name = "urlLabel";
             this.urlLabel.Size = new System.Drawing.Size(38, 18);
             this.urlLabel.TabIndex = 1;
