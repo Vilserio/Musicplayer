@@ -7,22 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace yt_mwldr
 {
     public partial class Form1 : Form
+
     {
         bool mousedown;
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
 
         public Form1()
         {
             InitializeComponent();
+            trackVolume.Value = 50;
         }
 
-        private void fileLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+        string[] paths, files;
 
         private void exitButton_Click(object sender, EventArgs e)
         {
@@ -34,43 +41,80 @@ namespace yt_mwldr
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void trackList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void controlPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            mousedown = true;
+            player.URL = paths[trackList.SelectedIndex];
+            player.Ctlcontrols.play();
         }
 
         private void controlPanel_MouseMove(object sender, MouseEventArgs e)
         {
-            if (mousedown)
+            if (e.Button == MouseButtons.Left)
             {
-                int mousex = MousePosition.X - 392;
-                int mousey = MousePosition.Y - 17;
-                //int mousex = MousePosition.X - 0;
-                //int mousey = MousePosition.Y - 0;
-                this.SetDesktopLocation(mousex, mousey);
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
 
-        private void controlPanel_MouseUp(object sender, MouseEventArgs e)
+        private void stopButton_Click(object sender, EventArgs e)
         {
-            mousedown = false;
+            player.Ctlcontrols.stop();
+        }
+
+        private void pauseButton_Click(object sender, EventArgs e)
+        {
+            player.Ctlcontrols.pause();
+        }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            player.Ctlcontrols.play();
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            if(trackList.SelectedIndex<trackList.Items.Count-1)
+            {
+                trackList.SelectedIndex = trackList.SelectedIndex + 1;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (customProgressbar1.Value < customProgressbar1.Maximum)
-                customProgressbar1.Value++;
+            if(player.playState==WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                //customProgressbar1.Maximum = player.Ctlcontrols.currentItem.duration;
+                //customProgressbar1 = player.Ctlcontrols.currentPosition;
+            }
+            try
+            {
+                labelTrackStart.Text = player.Ctlcontrols.currentPositionString;
+                //labelTrackEnd.Text = player.Ctlcontrols.currentItem.durationString.ToString();
+            }
+            catch
+            {
+
+            }
         }
 
-        private void customButton1_Click_1(object sender, EventArgs e)
+        private void trackVolume_Scroll(object sender, EventArgs e)
         {
-            customProgressbar1.Value = 0;
-            timer1.Start();
+            player.settings.volume = trackVolume.Value;
+        }
+
+        private void openButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Multiselect = true;
+            if(ofd.ShowDialog()==System.Windows.Forms.DialogResult.OK)
+            {
+                files = ofd.FileNames;
+                paths = ofd.FileNames;
+                for (int x = 0; x < files.Length;x++ )
+                {
+                    trackList.Items.Add(files[x]);
+                }
+            }
         }
     }
 }
