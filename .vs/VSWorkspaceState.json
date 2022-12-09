@@ -1,9 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Musicplayer",
+    "\\Musicplayer\\yt_mwldr",
+    "\\Musicplayer\\yt_mwldr\\bin",
+    "\\Musicplayer\\yt_mwldr\\obj",
+    "\\Musicplayer\\yt_mwldr\\Properties",
     "\\yt_mwldr",
     "\\yt_mwldr\\bin",
-    "\\yt_mwldr\\Custom"
+    "\\yt_mwldr\\bin\\Debug",
+    "\\yt_mwldr\\Properties"
   ],
   "SelectedNode": "\\yt_mwldr\\Form1.cs",
   "PreviewInSolutionExplorer": false

@@ -83,13 +83,13 @@ namespace yt_mwldr
         {
             if(player.playState==WMPLib.WMPPlayState.wmppsPlaying)
             {
-                //customProgressbar1.Maximum = player.Ctlcontrols.currentItem.duration;
-                //customProgressbar1 = player.Ctlcontrols.currentPosition;
+                customProgressbar1.Maximum = (int)player.Ctlcontrols.currentItem.duration;
+                customProgressbar1.Value = (int)player.Ctlcontrols.currentPosition;
             }
             try
             {
                 labelTrackStart.Text = player.Ctlcontrols.currentPositionString;
-                //labelTrackEnd.Text = player.Ctlcontrols.currentItem.durationString.ToString();
+                labelTrackEnd.Text = player.Ctlcontrols.currentItem.durationString.ToString();
             }
             catch
             {
@@ -100,6 +100,21 @@ namespace yt_mwldr
         private void trackVolume_Scroll(object sender, EventArgs e)
         {
             player.settings.volume = trackVolume.Value;
+        }
+
+        private void labelTrackStart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customProgressbar1_MouseDown(object sender, MouseEventArgs e)
+        {
+            player.Ctlcontrols.currentPosition = player.currentMedia.duration * e.X / customProgressbar1.Width;
         }
 
         private void openButton_Click(object sender, EventArgs e)

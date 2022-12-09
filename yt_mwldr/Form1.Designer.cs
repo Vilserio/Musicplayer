@@ -44,13 +44,13 @@ namespace yt_mwldr
             this.trackVolume = new System.Windows.Forms.TrackBar();
             this.player = new AxWMPLib.AxWindowsMediaPlayer();
             this.trackList = new System.Windows.Forms.ListBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.customProgressbar1 = new CustomControls.RJControls.customProgressbar();
             this.openButton = new yt_mwldr.Custom.customButton();
             this.stopButton = new yt_mwldr.Custom.customButton();
             this.pauseButton = new yt_mwldr.Custom.customButton();
             this.playButton = new yt_mwldr.Custom.customButton();
             this.nextButton = new yt_mwldr.Custom.customButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelTop.SuspendLayout();
             this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -143,13 +143,13 @@ namespace yt_mwldr
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panel1.Controls.Add(this.customProgressbar1);
             this.panel1.Controls.Add(this.labelTrackEnd);
             this.panel1.Controls.Add(this.labelTrackStart);
             this.panel1.Controls.Add(this.labelVolume);
             this.panel1.Controls.Add(this.trackVolume);
             this.panel1.Controls.Add(this.player);
             this.panel1.Controls.Add(this.trackList);
-            this.panel1.Controls.Add(this.customProgressbar1);
             this.panel1.Controls.Add(this.openButton);
             this.panel1.Controls.Add(this.stopButton);
             this.panel1.Controls.Add(this.pauseButton);
@@ -184,6 +184,7 @@ namespace yt_mwldr
             this.labelTrackStart.Size = new System.Drawing.Size(99, 41);
             this.labelTrackStart.TabIndex = 16;
             this.labelTrackStart.Text = "00:00";
+            this.labelTrackStart.Click += new System.EventHandler(this.labelTrackStart_Click);
             // 
             // labelVolume
             // 
@@ -230,13 +231,18 @@ namespace yt_mwldr
             this.trackList.TabIndex = 12;
             this.trackList.SelectedIndexChanged += new System.EventHandler(this.trackList_SelectedIndexChanged);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // customProgressbar1
             // 
             this.customProgressbar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
             this.customProgressbar1.ChannelHeight = 6;
             this.customProgressbar1.ForeBackColor = System.Drawing.Color.Transparent;
-            this.customProgressbar1.ForeColor = System.Drawing.Color.White;
-            this.customProgressbar1.Location = new System.Drawing.Point(45, 280);
+            this.customProgressbar1.ForeColor = System.Drawing.Color.Transparent;
+            this.customProgressbar1.Location = new System.Drawing.Point(45, 295);
             this.customProgressbar1.Name = "customProgressbar1";
             this.customProgressbar1.ShowMaximun = false;
             this.customProgressbar1.ShowValue = CustomControls.RJControls.TextPosition.Right;
@@ -245,7 +251,8 @@ namespace yt_mwldr
             this.customProgressbar1.SliderHeight = 6;
             this.customProgressbar1.SymbolAfter = "";
             this.customProgressbar1.SymbolBefore = "";
-            this.customProgressbar1.TabIndex = 11;
+            this.customProgressbar1.TabIndex = 18;
+            this.customProgressbar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customProgressbar1_MouseDown);
             // 
             // openButton
             // 
@@ -347,11 +354,6 @@ namespace yt_mwldr
             this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,7 +387,6 @@ namespace yt_mwldr
         private FontAwesome.Sharp.IconButton iconButton1;
         private AxWMPLib.AxWindowsMediaPlayer player;
         private System.Windows.Forms.ListBox trackList;
-        private CustomControls.RJControls.customProgressbar customProgressbar1;
         private Custom.customButton openButton;
         private Custom.customButton stopButton;
         private Custom.customButton pauseButton;
@@ -396,6 +397,7 @@ namespace yt_mwldr
         private System.Windows.Forms.Label labelTrackEnd;
         private System.Windows.Forms.Label labelTrackStart;
         private System.Windows.Forms.Timer timer1;
+        private CustomControls.RJControls.customProgressbar customProgressbar1;
     }
 }
 
