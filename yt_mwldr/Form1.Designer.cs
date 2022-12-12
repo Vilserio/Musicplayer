@@ -167,7 +167,7 @@ namespace yt_mwldr
             this.labelTrackEnd.BackColor = System.Drawing.Color.Black;
             this.labelTrackEnd.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTrackEnd.ForeColor = System.Drawing.Color.White;
-            this.labelTrackEnd.Location = new System.Drawing.Point(620, 15);
+            this.labelTrackEnd.Location = new System.Drawing.Point(620, 17);
             this.labelTrackEnd.Name = "labelTrackEnd";
             this.labelTrackEnd.Size = new System.Drawing.Size(99, 41);
             this.labelTrackEnd.TabIndex = 17;
@@ -179,7 +179,7 @@ namespace yt_mwldr
             this.labelTrackStart.BackColor = System.Drawing.Color.Black;
             this.labelTrackStart.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTrackStart.ForeColor = System.Drawing.Color.White;
-            this.labelTrackStart.Location = new System.Drawing.Point(70, 15);
+            this.labelTrackStart.Location = new System.Drawing.Point(70, 17);
             this.labelTrackStart.Name = "labelTrackStart";
             this.labelTrackStart.Size = new System.Drawing.Size(99, 41);
             this.labelTrackStart.TabIndex = 16;
@@ -238,7 +238,7 @@ namespace yt_mwldr
             // 
             // customProgressbar1
             // 
-            this.customProgressbar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
+            this.customProgressbar1.ChannelColor = System.Drawing.Color.Lavender;
             this.customProgressbar1.ChannelHeight = 6;
             this.customProgressbar1.ForeBackColor = System.Drawing.Color.Transparent;
             this.customProgressbar1.ForeColor = System.Drawing.Color.Transparent;
@@ -247,7 +247,7 @@ namespace yt_mwldr
             this.customProgressbar1.ShowMaximun = false;
             this.customProgressbar1.ShowValue = CustomControls.RJControls.TextPosition.Right;
             this.customProgressbar1.Size = new System.Drawing.Size(700, 30);
-            this.customProgressbar1.SliderColor = System.Drawing.Color.RoyalBlue;
+            this.customProgressbar1.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(255)))));
             this.customProgressbar1.SliderHeight = 6;
             this.customProgressbar1.SymbolAfter = "";
             this.customProgressbar1.SymbolBefore = "";
