@@ -364,6 +364,7 @@ namespace yt_mwldr
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.panelTop.ResumeLayout(false);
