@@ -38,19 +38,19 @@ namespace yt_mwldr
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customProgressbar1 = new CustomControls.RJControls.customProgressbar();
             this.labelTrackEnd = new System.Windows.Forms.Label();
             this.labelTrackStart = new System.Windows.Forms.Label();
             this.labelVolume = new System.Windows.Forms.Label();
             this.trackVolume = new System.Windows.Forms.TrackBar();
             this.player = new AxWMPLib.AxWindowsMediaPlayer();
             this.trackList = new System.Windows.Forms.ListBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.customProgressbar1 = new CustomControls.RJControls.customProgressbar();
             this.openButton = new yt_mwldr.Custom.customButton();
             this.stopButton = new yt_mwldr.Custom.customButton();
             this.pauseButton = new yt_mwldr.Custom.customButton();
             this.playButton = new yt_mwldr.Custom.customButton();
             this.nextButton = new yt_mwldr.Custom.customButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelTop.SuspendLayout();
             this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -125,9 +125,10 @@ namespace yt_mwldr
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(325, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(310, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -160,6 +161,24 @@ namespace yt_mwldr
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(784, 440);
             this.panel1.TabIndex = 2;
+            // 
+            // customProgressbar1
+            // 
+            this.customProgressbar1.ChannelColor = System.Drawing.Color.Lavender;
+            this.customProgressbar1.ChannelHeight = 6;
+            this.customProgressbar1.ForeBackColor = System.Drawing.Color.Transparent;
+            this.customProgressbar1.ForeColor = System.Drawing.Color.Transparent;
+            this.customProgressbar1.Location = new System.Drawing.Point(45, 295);
+            this.customProgressbar1.Name = "customProgressbar1";
+            this.customProgressbar1.ShowMaximun = false;
+            this.customProgressbar1.ShowValue = CustomControls.RJControls.TextPosition.Right;
+            this.customProgressbar1.Size = new System.Drawing.Size(700, 30);
+            this.customProgressbar1.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(255)))));
+            this.customProgressbar1.SliderHeight = 6;
+            this.customProgressbar1.SymbolAfter = "";
+            this.customProgressbar1.SymbolBefore = "";
+            this.customProgressbar1.TabIndex = 18;
+            this.customProgressbar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customProgressbar1_MouseDown);
             // 
             // labelTrackEnd
             // 
@@ -230,29 +249,6 @@ namespace yt_mwldr
             this.trackList.Size = new System.Drawing.Size(600, 156);
             this.trackList.TabIndex = 12;
             this.trackList.SelectedIndexChanged += new System.EventHandler(this.trackList_SelectedIndexChanged);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // customProgressbar1
-            // 
-            this.customProgressbar1.ChannelColor = System.Drawing.Color.Lavender;
-            this.customProgressbar1.ChannelHeight = 6;
-            this.customProgressbar1.ForeBackColor = System.Drawing.Color.Transparent;
-            this.customProgressbar1.ForeColor = System.Drawing.Color.Transparent;
-            this.customProgressbar1.Location = new System.Drawing.Point(45, 295);
-            this.customProgressbar1.Name = "customProgressbar1";
-            this.customProgressbar1.ShowMaximun = false;
-            this.customProgressbar1.ShowValue = CustomControls.RJControls.TextPosition.Right;
-            this.customProgressbar1.Size = new System.Drawing.Size(700, 30);
-            this.customProgressbar1.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(105)))), ((int)(((byte)(255)))));
-            this.customProgressbar1.SliderHeight = 6;
-            this.customProgressbar1.SymbolAfter = "";
-            this.customProgressbar1.SymbolBefore = "";
-            this.customProgressbar1.TabIndex = 18;
-            this.customProgressbar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customProgressbar1_MouseDown);
             // 
             // openButton
             // 
@@ -353,6 +349,11 @@ namespace yt_mwldr
             this.nextButton.Textcolor = System.Drawing.Color.White;
             this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
